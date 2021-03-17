@@ -19,4 +19,12 @@ mobileMenu.addEventListener("click", function () {
   hamMenuLine1.classList.toggle("rotate-45");
   hamMenuLine3.classList.toggle("-rotate-45");
   menu.classList.toggle("-translate-y-full");
+  if (menu.classList.contains("-translate-y-full")) {
+    setTimeout(function () {
+      menu.classList.toggle("hidden");
+      console.log("running");
+    }, 100);
+  } else {
+    menu.classList.remove("hidden");
+  }
 });
