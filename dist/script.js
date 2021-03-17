@@ -9,12 +9,10 @@ const swiper = new Swiper(".swiper-container", {
 
 let mobileMenu = document.getElementById("mobileMenu");
 let menu = document.getElementById("menu");
-menu.classList.remove("hidden");
 let hamMenuLine1 = document.getElementById("ham-menu-line-1");
 let hamMenuLine2 = document.getElementById("ham-menu-line-2");
 let hamMenuLine3 = document.getElementById("ham-menu-line-3");
 mobileMenu.addEventListener("click", function () {
-  mobileMenu.classList.toggle("fixed");
   hamMenuLine2.classList.toggle("hidden");
   hamMenuLine3.classList.toggle("w-3/5");
   hamMenuLine3.classList.toggle("mt-1");

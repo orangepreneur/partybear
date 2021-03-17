@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Party Bear</title>
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="z-50 sticky top-0 flex px-4 pt-6">
+      <div class="w-3/5 text-2xl">&nbsp;</div>
+      <div class="w-2/5 z-50 flex items-center justify-end overflow-hidden">
+        <div
+          id="mobileMenu"
+          class="w-12 bg-white h-12 rounded-full flex flex-col pl-3 justify-center"
+        >
+          <p
+            id="ham-menu-line-1"
+            class="transition-all duration-50 transform ease-in-out w-3/5 h-0.5 bg-black"
+          ></p>
+          <p
+            id="ham-menu-line-2"
+            class="transition-all duration-50 transform ease-in-out w-2/5 h-0.5 mt-1 bg-black"
+          ></p>
+          <p
+            id="ham-menu-line-3"
+            class="transition-all duration-50 transform ease-in-out w-1/5 h-0.5 mt-1 bg-black"
+          ></p>
+        </div>
+      </div>
+      <div
+        id="menu"
+        class="transition-all duration-100 ease-in-out -translate-y-full transform w-full z-40 fixed h-full bg-white -mx-4 -my-6 flex flex-col justify-center items-center"
+      >
+        <ul>
+          <li class="my-3 text-2xl">- Home</li>
+          <li class="my-3 text-2xl">- Packages</li>
+          <li class="my-3 text-2xl">- Freebies</li>
+          <li class="my-3 text-2xl">- Contact</li>
+        </ul>
+      </div>
+    </header>
+    <!-- Product Banner -->
+    <div
+      style="
+        background-image: url(https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80);
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+      class="py-40 transform -mt-20"
+    ></div>
+    <!-- Product Title -->
+    <div class="my-6">
+      <div class="px-4">
+        <h1 class="text-2xl"><strong>Happy Wifey</strong></h1>
+        <div class="flex mt-3 items-center">
+          <div class="text-2xl font-black mr-2 text-red-500">499/-</div>
+          <div class="text-gray-600 line-through mr-2">899/-</div>
+          <div
+            class="bg-green-300 px-2 py-1 text-green-800 font-bold rounded-sm text-xs"
+          >
+            20% OFF
+          </div>
+        </div>
+        <span class="text-xs text-gray-500">Inclusive of all taxes</span>
+      </div>
+    </div>
+    <!-- Product Info -->
+    <article class="px-4 mt-2 text-gray-800 leading-7">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
+        ultrices augue. Fusce a erat pellentesque, viverra urna nec, posuere
+        erat. Aenean ut mauris at purus efficitur vestibulum non id augue. In id
+        commodo sapien, in dictum magna. In porta dictum nunc, eu faucibus orci
+        interdum et. Sed consequat auctor nisl, quis lobortis quam ornare sit
+        amet. Phasellus ut risus elit. In et sem et sem semper sollicitudin.
+        Phasellus posuere, diam id suscipit maximus, mauris turpis venenatis
+        ligula, et sagittis velit erat vitae lorem. Praesent efficitur pharetra
+        scelerisque. Donec auctor ultrices hendrerit. Maecenas ac purus nisi. In
+        justo nunc, efficitur vel efficitur in, tincidunt at elit. Nulla
+        vehicula sed est eget convallis. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
+        nibh a lorem pulvinar semper.
+      </p>
+    </article>
+    <!-- Tags -->
+    <aside class="px-4 my-6">
+      <span
+        class="px-2 py-1 bg-gray-200 text-gray-800 rounded-sm mt-1 inline-block text-xs"
+        >Package</span
+      >
+    </aside>
+    <!-- Suitable For -->
+    <div class="px-4 mt-4">
+      <h3 class="font-bold">Suitable For</h3>
+      <div class="flex justify-evenly mt-2">
+        <div
+          class="w-16 h-16 bg-white rounded-md shadow-md flex flex-col justify-center items-center"
+        >
+          s
+        </div>
+        <div
+          class="w-16 h-16 bg-white rounded-md shadow-md flex flex-col justify-center items-center"
+        >
+          s
+        </div>
+        <div
+          class="w-16 h-16 bg-white rounded-md shadow-md flex flex-col justify-center items-center"
+        >
+          s
+        </div>
+      </div>
+    </div>
+    <!-- CTA -->
+    <section class="sticky bottom-0 px-4 py-3 mt-10 bg-yellow-200 shadow-lg">
+      <div class="flex justify-between items-center">
+        <span class="font-bold">Add to Cart</span>
+        <img src="./assets/muffin.svg" width="30" alt="Muffin" />
+      </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
