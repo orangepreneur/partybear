@@ -64,14 +64,39 @@
       </div>
     </header>
     <!-- Product Banner -->
-    <div
-      style="
-        background-image: url(https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80);
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
-      class="py-40 transform -mt-20"
-    ></div>
+    <section class="-mt-20">
+      <div class="swiper-container banner">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div
+            style="
+              background-size: cover;
+              background-position: center;
+              background-image: url(https://images.unsplash.com/photo-1601409751311-cbecfe223af4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNha2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
+            "
+            class="py-32 swiper-slide"
+          ></div>
+          <div
+            style="
+              background-size: cover;
+              background-position: center;
+              background-image: url(https://images.unsplash.com/photo-1586985289906-406988974504?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTExfHxjYWtlfGVufDB8fDB8&auto=format&fit=crop&w=400&q=60);
+            "
+            class="py-32 swiper-slide"
+          ></div>
+          <div
+            style="
+              background-size: cover;
+              background-position: center;
+              background-image: url(https://images.unsplash.com/photo-1464219551459-ac14ae01fbe0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTUyfHxjYWtlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
+            "
+            class="py-32 swiper-slide"
+          ></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
     <!-- Product Title -->
     <div class="my-6">
       <div class="px-4">
@@ -195,7 +220,7 @@
       >
     </aside>
     <!-- Testimonials -->
-    <div class="my-4 mt-10 relative">
+    <div class="mx-2 my-4 mt-10 relative">
       <h2 class="text-lg font-bold mb-2 px-4">
         People love talking about us..
       </h2>
@@ -226,13 +251,18 @@
       </div>
     </div>
     <!-- CTA -->
-    <section class="sticky bottom-0 px-6 py-3 mt-10 bg-yellow-200 shadow-lg">
+    <section
+      class="z-50 sticky bottom-0 px-6 py-3 mt-10 bg-yellow-200 shadow-lg"
+    >
       <div class="flex justify-between items-center">
         <span class="font-bold">Add to Cart</span>
         <img src="./assets/muffin.svg" width="30" alt="Muffin" />
       </div>
     </section>
-    <!-- Scripts -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <!-- Tab Selection Scripts -->
     <script>
       let infoTabBtn = document.getElementById("infoTabBtn");
       let deliveryTabBtn = document.getElementById("deliveryTabBtn");
@@ -242,19 +272,100 @@
         document.getElementById("infoTab").classList.remove("hidden");
         document.getElementById("deliveryTab").classList.add("hidden");
         document.getElementById("careTab").classList.add("hidden");
+
+        document.getElementById("infoTabBtn").classList.remove("bg-gray-100");
+        document.getElementById("infoTabBtn").classList.remove("text-gray-700");
+        document.getElementById("infoTabBtn").classList.add("bg-blue-100");
+        document.getElementById("infoTabBtn").classList.add("text-blue-700");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.remove("bg-blue-100");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.remove("text-blue-700");
+        document.getElementById("deliveryTabBtn").classList.add("bg-gray-100");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.add("text-gray-700");
+        document.getElementById("careTabBtn").classList.remove("text-blue-700");
+        document.getElementById("careTabBtn").classList.remove("bg-blue-100");
+        document.getElementById("careTabBtn").classList.add("bg-gray-100");
+        document.getElementById("careTabBtn").classList.add("text-gray-700");
       });
       deliveryTabBtn.addEventListener("click", function () {
         document.getElementById("deliveryTab").classList.remove("hidden");
         document.getElementById("careTab").classList.add("hidden");
         document.getElementById("infoTab").classList.add("hidden");
+
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.remove("bg-gray-100");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.remove("text-gray-700");
+        document.getElementById("deliveryTabBtn").classList.add("bg-blue-100");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.add("text-blue-700");
+        document.getElementById("infoTabBtn").classList.remove("bg-blue-100");
+        document.getElementById("infoTabBtn").classList.remove("text-blue-700");
+        document.getElementById("infoTabBtn").classList.add("bg-gray-100");
+        document.getElementById("infoTabBtn").classList.add("text-gray-700");
+        document.getElementById("careTabBtn").classList.remove("text-blue-700");
+        document.getElementById("careTabBtn").classList.remove("bg-blue-100");
+        document.getElementById("careTabBtn").classList.add("bg-gray-100");
+        document.getElementById("careTabBtn").classList.add("text-gray-700");
       });
       careTabBtn.addEventListener("click", function () {
         document.getElementById("careTab").classList.remove("hidden");
         document.getElementById("infoTab").classList.add("hidden");
         document.getElementById("deliveryTab").classList.add("hidden");
+
+        document.getElementById("careTabBtn").classList.remove("bg-gray-100");
+        document.getElementById("careTabBtn").classList.remove("text-gray-700");
+        document.getElementById("careTabBtn").classList.add("bg-blue-100");
+        document.getElementById("careTabBtn").classList.add("text-blue-700");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.remove("bg-blue-100");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.remove("text-blue-700");
+        document.getElementById("deliveryTabBtn").classList.add("bg-gray-100");
+        document
+          .getElementById("deliveryTabBtn")
+          .classList.add("text-gray-700");
+        document.getElementById("infoTabBtn").classList.remove("text-blue-700");
+        document.getElementById("infoTabBtn").classList.remove("bg-blue-100");
+        document.getElementById("infoTabBtn").classList.add("bg-gray-100");
+        document.getElementById("infoTabBtn").classList.add("text-gray-700");
       });
     </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./script.js"></script>
+    <!-- Header Banner Script -->
+    <script>
+      const testimonialSlider = new Swiper(".swiper-container.testimonial", {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        centeredSlides: true,
+        spaceBetween: 10,
+        slidesPerView: 1,
+      });
+      const bannerSlider = new Swiper(".swiper-container.banner", {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        centeredSlides: true,
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
+      });
+    </script>
   </body>
 </html>

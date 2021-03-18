@@ -1,26 +1,3 @@
-const swiper = new Swiper(".swiper-container.banner", {
-  // Optional parameters
-  loop: true,
-  autoplay: {
-    delay: 5000,
-  },
-  centeredSlides: true,
-  spaceBetween: 10,
-  slidesPerView: 2,
-  slidesPerView: "auto",
-});
-
-const testimonialSlider = new Swiper(".swiper-container.testimonial", {
-  // Optional parameters
-  loop: true,
-  autoplay: {
-    delay: 5000,
-  },
-  centeredSlides: true,
-  spaceBetween: 10,
-  slidesPerView: 1,
-});
-
 let mobileMenu = document.getElementById("mobileMenu");
 let menu = document.getElementById("menu");
 let hamMenuLine1 = document.getElementById("ham-menu-line-1");
