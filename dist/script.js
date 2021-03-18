@@ -1,10 +1,24 @@
-const swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".swiper-container.banner", {
   // Optional parameters
   loop: true,
+  autoplay: {
+    delay: 5000,
+  },
   centeredSlides: true,
   spaceBetween: 10,
   slidesPerView: 2,
   slidesPerView: "auto",
+});
+
+const testimonialSlider = new Swiper(".swiper-container.testimonial", {
+  // Optional parameters
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  centeredSlides: true,
+  spaceBetween: 10,
+  slidesPerView: 1,
 });
 
 let mobileMenu = document.getElementById("mobileMenu");
@@ -21,7 +35,7 @@ mobileMenu.addEventListener("click", function () {
   menu.classList.toggle("-translate-y-full");
   if (menu.classList.contains("-translate-y-full")) {
     setTimeout(function () {
-      menu.classList.toggle("hidden");
+      menu.classList.add("hidden");
       console.log("running");
     }, 100);
   } else {

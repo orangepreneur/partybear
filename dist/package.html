@@ -53,7 +53,7 @@
       </div>
       <div
         id="menu"
-        class="transition-all duration-100 ease-in-out -translate-y-full transform w-full z-40 fixed h-full bg-white -mx-4 -my-6 flex flex-col justify-center items-center"
+        class="transition-all duration-100 ease-in-out -translate-y-full transform w-full z-40 fixed h-full bg-white -mx-4 -my-6 flex flex-col justify-center items-center hidden"
       >
         <ul>
           <li class="my-3 text-2xl">- Home</li>
@@ -94,7 +94,7 @@
         class="flex text-sm justify-between overflow-hidden items-center rounded-md bg-white border mb-2"
       >
         <div class="w-2/6 py-2 px-2 text-black bg-gradient-to-r">
-          <span>Cake</span>
+          <span>Chocolate Cake</span>
           <span class="text-xs block">1 Pound</span>
         </div>
         <div class="w-3/6 py-2 px-2 text-right">
@@ -126,22 +126,66 @@
       </div>
     </div>
     <!-- Product Info -->
-    <article class="px-4 mt-2 text-gray-800 leading-7">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
-        ultrices augue. Fusce a erat pellentesque, viverra urna nec, posuere
-        erat. Aenean ut mauris at purus efficitur vestibulum non id augue. In id
-        commodo sapien, in dictum magna. In porta dictum nunc, eu faucibus orci
-        interdum et. Sed consequat auctor nisl, quis lobortis quam ornare sit
-        amet. Phasellus ut risus elit. In et sem et sem semper sollicitudin.
-        Phasellus posuere, diam id suscipit maximus, mauris turpis venenatis
-        ligula, et sagittis velit erat vitae lorem. Praesent efficitur pharetra
-        scelerisque. Donec auctor ultrices hendrerit. Maecenas ac purus nisi. In
-        justo nunc, efficitur vel efficitur in, tincidunt at elit. Nulla
-        vehicula sed est eget convallis. Pellentesque habitant morbi tristique
-        senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-        nibh a lorem pulvinar semper.
-      </p>
+    <article class="px-4 mt-6 text-gray-800 leading-7">
+      <div class="mb-2">
+        <ul class="grid grid-cols-3 text-center">
+          <li
+            id="infoTabBtn"
+            class="py-1 bg-blue-100 text-blue-700 rounded-l-lg"
+          >
+            Information
+          </li>
+          <li id="deliveryTabBtn" class="py-1 bg-gray-100 text-gray-700">
+            Delivery
+          </li>
+          <li
+            id="careTabBtn"
+            class="py-1 bg-gray-100 text-gray-700 rounded-r-lg"
+          >
+            Care
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div id="infoTab">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            nec ultrices augue. Fusce a erat pellentesque, viverra urna nec,
+            posuere erat. Aenean ut mauris at purus efficitur vestibulum non id
+            augue. In id commodo sapien, in dictum magna. In porta dictum nunc,
+            eu faucibus orci interdum et. Sed consequat auctor nisl, quis
+            lobortis quam ornare sit amet. Phasellus ut risus elit. In et sem et
+            sem semper sollicitudin. Phasellus posuere, diam id suscipit
+            maximus, mauris turpis venenatis ligula, et sagittis velit erat
+            vitae lorem. Praesent efficitur pharetra scelerisque. Donec auctor
+            ultrices hendrerit. Maecenas ac purus nisi. In justo nunc, efficitur
+            vel efficitur in, tincidunt at elit. Nulla vehicula sed est eget
+            convallis. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Aliquam auctor nibh a lorem
+            pulvinar semper.
+          </p>
+        </div>
+        <div class="hidden" id="deliveryTab">
+          <h2>Delivery</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            nec ultrices augue. Fusce a erat pellentesque, viverra urna nec,
+            posuere erat.
+          </p>
+        </div>
+        <div class="hidden" id="careTab">
+          <h2>Care</h2>
+          <p>
+            Phasellus posuere, diam id suscipit maximus, mauris turpis venenatis
+            ligula, et sagittis velit erat vitae lorem. Praesent efficitur
+            pharetra scelerisque. Donec auctor ultrices hendrerit. Maecenas ac
+            purus nisi. In justo nunc, efficitur vel efficitur in, tincidunt at
+            elit. Nulla vehicula sed est eget convallis. Pellentesque habitant
+            morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Aliquam auctor nibh a lorem pulvinar semper.
+          </p>
+        </div>
+      </div>
     </article>
     <!-- Tags -->
     <aside class="px-4 my-6">
@@ -150,35 +194,66 @@
         >Package</span
       >
     </aside>
-    <!-- Suitable For -->
-    <div class="px-4 mt-4">
-      <h3 class="font-bold">Suitable For</h3>
-      <div class="flex justify-evenly mt-2">
-        <div
-          class="w-16 h-16 bg-white rounded-md shadow-md flex flex-col justify-center items-center"
-        >
-          s
-        </div>
-        <div
-          class="w-16 h-16 bg-white rounded-md shadow-md flex flex-col justify-center items-center"
-        >
-          s
-        </div>
-        <div
-          class="w-16 h-16 bg-white rounded-md shadow-md flex flex-col justify-center items-center"
-        >
-          s
+    <!-- Testimonials -->
+    <div class="my-4 mt-10 relative">
+      <h2 class="text-lg font-bold mb-2 px-4">
+        People love talking about us..
+      </h2>
+      <div class="testimonial swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="p-4 swiper-slide border border-dashed flex flex-col">
+            <span
+              class="absolute top-14 left-2 z-0 font-serif"
+              style="line-height: 0; font-size: 150px; opacity: 0.04"
+              >“</span
+            >
+            <p class="text-sm">
+              I was very specticle at first then I showed the trust and got what
+              I wanted to have.
+            </p>
+            <div class="flex items-center mt-2">
+              <img
+                class="rounded-full w-8 h-8"
+                src="https://images.generated.photos/ooO777ulRSxUF687DS7Q1rB6hTanj6Q8MQ5jWYNQtiQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1NTc5NzcuanBn.jpg"
+                alt=""
+              />
+              <span class="font-bold ml-2 text-xs">Mukesh Joshi</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- CTA -->
-    <section class="sticky bottom-0 px-4 py-3 mt-10 bg-yellow-200 shadow-lg">
+    <section class="sticky bottom-0 px-6 py-3 mt-10 bg-yellow-200 shadow-lg">
       <div class="flex justify-between items-center">
         <span class="font-bold">Add to Cart</span>
         <img src="./assets/muffin.svg" width="30" alt="Muffin" />
       </div>
     </section>
     <!-- Scripts -->
+    <script>
+      let infoTabBtn = document.getElementById("infoTabBtn");
+      let deliveryTabBtn = document.getElementById("deliveryTabBtn");
+      let careTabBtn = document.getElementById("careTabBtn");
+
+      infoTabBtn.addEventListener("click", function () {
+        document.getElementById("infoTab").classList.remove("hidden");
+        document.getElementById("deliveryTab").classList.add("hidden");
+        document.getElementById("careTab").classList.add("hidden");
+      });
+      deliveryTabBtn.addEventListener("click", function () {
+        document.getElementById("deliveryTab").classList.remove("hidden");
+        document.getElementById("careTab").classList.add("hidden");
+        document.getElementById("infoTab").classList.add("hidden");
+      });
+      careTabBtn.addEventListener("click", function () {
+        document.getElementById("careTab").classList.remove("hidden");
+        document.getElementById("infoTab").classList.add("hidden");
+        document.getElementById("deliveryTab").classList.add("hidden");
+      });
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
