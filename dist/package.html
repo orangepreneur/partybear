@@ -158,11 +158,18 @@
       <h3 class="mb-2 font-semibold text-gray-700">Customize Package</h3>
       <div class="mt-2">
         <label class="text-sm" for="cakeFlavor"> Select Cake Flavour</label>
-        <select
-          class="text-sm border rounded-sm border-blue-100 w-full px-2 py-2"
-          name="cakeFlavor"
-          id="cakeFlavor"
+        <script>
+          document
+            .getElementById("selectFlavor")
+            .addEventListener("click", function () {
+              document.getElementById("cakeFlavor").click();
+            });
+        </script>
+        <div
+          id="selectFlavor"
+          class="bg-white text-sm border rounded-sm border-blue-100 w-full px-2 py-2"
         >
+        <select style="width:100%" name="cakeFlavor" id="cakeFlavor">
           <option value="chocolate">Chocolate</option>
           <option value="butterscotch">Butterscotch</option>
           <option value="pineapple">Pineapple</option>
