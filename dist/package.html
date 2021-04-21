@@ -20,8 +20,23 @@
     />
     <style>
       select{
-        -webkit-appearance: none
+        -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
       }
+      input[type='date'], input[type='time'] {
+    -webkit-appearance: none;
+}
+      /* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
     </style>
   </head>
   <body>
@@ -172,7 +187,7 @@
         </script>
         <div
           id="selectFlavor"
-          class="bg-white text-sm border rounded-sm border-blue-100 w-full px-2 py-2"
+          class="bg-white mt-2 text-sm border rounded-sm border-blue-100 w-full px-2 py-2"
         >
         <select style="width:100%" name="cakeFlavor" id="cakeFlavor">
           <option value="chocolate">Chocolate</option>
@@ -184,7 +199,7 @@
       <div class="mt-2">
         <label class="text-sm" for="date"> Select Date</label>
         <input
-          class="text-sm border rounded-sm border-blue-100 w-full px-2 py-2"
+          class="block text-sm border rounded-sm border-blue-100 w-full px-2 py-2"
           type="date"
           name="date"
           id="date"
